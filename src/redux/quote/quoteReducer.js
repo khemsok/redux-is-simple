@@ -10,7 +10,7 @@ const initialState = {
 export const quoteReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_QUOTE_REQUEST:
-      return { ...state, isLoading: true };
+      return { ...state, isLoading: true, error: "" };
 
     case FETCH_QUOTE_SUCCESS:
       const quote = action.payload[0]["q"];
