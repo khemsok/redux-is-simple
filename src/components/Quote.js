@@ -45,7 +45,7 @@ export default function Quote() {
         <div style={{ marginBottom: "50px" }}>
           <div className={classes.quoteContainer}>
             <div style={{ justifyContent: "center", display: "flex", alignItems: "center", flexDirection: "column" }}>
-              {error.length !== 0 ? (
+              {error.length === 0 ? (
                 <Typography variant="h4" color="secondary" style={{ marginBottom: "20px" }}>
                   Oops...
                 </Typography>
