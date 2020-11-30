@@ -11,6 +11,13 @@ import DarkModeToggle from "react-dark-mode-toggle";
 
 const useStyles = makeStyles((theme) => ({
   title: {
+    textDecoration: "none",
+    color: "inherit",
+  },
+  titleContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     transition: ".2s ease-in",
     textDecoration: "none",
     color: "inherit",
@@ -34,9 +41,12 @@ export default function Header() {
 
   return (
     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "30px" }}>
-      <Typography variant="h6" className={classes.title} component="a" href="/">
-        REDUX IS SIMPLE 🦉
-      </Typography>
+      <div className={classes.titleContainer}>
+        <Typography variant="h6" className={classes.title} component="a" href="/">
+          REDUX IS SIMPLE
+        </Typography>
+        <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/owl_1f989.png" style={{ width: "25px", marginLeft: "5px" }} />
+      </div>
 
       <DarkModeToggle onChange={toggleTheme} checked={theme === "light" ? false : true} speed={2.5} size={50} />
     </div>
