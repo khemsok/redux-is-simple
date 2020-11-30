@@ -13,7 +13,7 @@ import { fetchQuote } from "../redux/quote/quoteAction";
 const useStyles = makeStyles((theme) => ({
   quoteContainer: {
     borderLeft: `10px solid ${theme.palette.primary.main}`,
-    minHeight: "100px",
+    // minHeight: "100px",
     padding: "10px",
   },
   author: {
